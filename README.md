@@ -18,7 +18,7 @@ Now it resizes to:
 |   300px      | 10px       | 
 |   600px      | 13px       | 
 |   900px      | 16px       |
-| < 900px      | 20px       | 
+| > 900px      | 20px       | 
 
 Unluckly I could not find if Sublime Text gives an `on_resize` or
 `on_update` so I hooked the plugin to `on_modified_async`, `on_activated`, 
