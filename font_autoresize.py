@@ -3,15 +3,15 @@ import sublime, sublime_plugin
 class WindowListener( sublime_plugin.EventListener ):
 	
 	def on_activate_async( self, view ):
-		self.check_Width( view )
+		self.check_width( view )
 
 	def on_deactivated_async( self, view ):
-		self.check_Width( view )
+		self.check_width( view )
 
 	def on_modified_async( self, view ):
-		self.check_Width( view )
+		self.check_width( view )
 
-	def check_Width( self, view ):
+	def check_width( self, view ):
 		width = view.viewport_extent()[ 0 ]
 		s = sublime.load_settings("Preferences.sublime-settings")
 		sf=20
