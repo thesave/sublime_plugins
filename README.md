@@ -1,11 +1,23 @@
 sublime_plugins
 ===============
-
 My Random Sublime Plugins
+This repo is just a bucket where I put the sublime plugins that I happen to write.
+Feel free to clone and install them.
+At your own risk :)
 
-This repo is just a bucket where I put the occasional sublime plugins that I happen to write.
+List of Plugins
+---
 
-Feel free to take them and install them.
+**font_autoresize.py**
 
-At you own risk :)
-
+I wanted a plugin that adjusted the fonts of the editor.
+Now it resizes to:
+  window width      font size
+      300px           10px
+      600px           13px
+      900px           16px
+    > 900px           20px
+    
+Unluckly I could not find if Sublime Text gives an `on_resize` or
+`on_update` so I hooked the plugin to `on_modified_async`, `on_activated`, 
+and to `on_deactivated`.
