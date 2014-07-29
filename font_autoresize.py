@@ -1,10 +1,14 @@
 import sublime, sublime_plugin
 
 class WindowListener( sublime_plugin.EventListener ):
-	def on_activate( self, view ):
+	
+	def on_activate_async( self, view ):
 		self.check_Width( view )
 
-	def on_deactivated( self, view ):
+	def on_deactivated_async( self, view ):
+		self.check_Width( view )
+
+	def on_modified_async( self, view ):
 		self.check_Width( view )
 
 	def check_Width( self, view ):
@@ -17,5 +21,5 @@ class WindowListener( sublime_plugin.EventListener ):
 			sf=13
 		elif width < 900:
 			sf=16
-		s.set( "font_size", sf)
-		# sublime.message_dialog( str( width ) )
+		if s.get( "font_size" ) != sf:
+			s.set( "font_size", sf)
