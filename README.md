@@ -21,5 +21,5 @@ Now it resizes to:
 | > 900px      | 20px       | 
 
 Unluckly I could not find if Sublime Text gives an `on_resize` or
-`on_update` so I hooked the plugin to `on_modified_async`, `on_activated`, 
-and to `on_deactivated`.
+`on_update` so I hooked the plugin to `on_modified_async`, `on_activated_async`, 
+and to `on_deactivated_async`.
